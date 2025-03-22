@@ -1,0 +1,249 @@
+/* *{} will target all elements */
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Urbanist", sans-serif;
+}
+
+/* for margining both side use this always */
+/* .container-wrapper{
+    width: 80%;
+    margin:0px auto;
+} */
+.container{
+    width: 80%;
+    margin:0px auto;
+}
+
+.container-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn{
+    padding: 10px 25px;
+    background: green;
+    border-radius: 30px;
+}
+.btn-primary{
+    background: #A8FF35;
+    color: #000000;
+    border: 1px solid #A8FF35;
+}
+.btn-tutorial{
+    background-color: transparent;
+    color: #A8FF35;
+    border: 1px solid #A8FF35;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+}
+nav{
+    display: flex;
+    gap: 50px;
+}
+header{
+    padding: 20px 0 ;
+}
+.banner{
+    text-align: center;
+    padding: 170px 0px 200px 0px;
+    color: #ffffff;
+}
+.banner h1 {
+   font-size: 64px;
+   margin-bottom: 30px;
+}
+.banner p {
+   font-size: 16px;
+   margin-bottom: 20px;
+}
+main{
+    background: url(./logos/Background.png);
+}
+.btn-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.subcriber{
+    padding: 100px 0px;
+}
+.subcriber h2{
+    font-size: 100px;
+    font-weight: 400;
+}
+.subcriber-wrapper{
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+/* .subcriber-child{
+    flex-grow: 1;
+} */
+.subcriber-child{
+    width: 30%;
+    position: relative;
+
+}
+.subcriber-icon{
+    margin-top: 20px;
+    /* inline-flex will take required space not full space */
+    display: inline-flex;               
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: #A8FF35;
+    border-radius: 20px;
+
+}
+.subcriber-child .line{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.sec-heading{
+
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 40px;
+    font-weight: 500;
+}
+.sec-heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.sec-heading h2{
+    margin-bottom: 25px;
+    line-height: 50px;
+}
+.partner{
+    padding: 100px 0px;
+}
+.partner-wrapper{
+    display: flex;
+    justify-content:space-between
+}
+.parent-child{
+    width: 30%;
+    padding: 40px 70px 70px 70px;
+    background-color: #fafafa;
+    border: 1px solid transparent;
+
+}
+.parent-child h4{
+    font-size: 20px;
+    font-weight: 500;
+   
+}
+.parent-child div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0px ;
+    
+}
+.parent-child img{
+    width: 43px ;
+    height: 43px;
+}
+.parent-child:hover {
+   background-color: greenyellow;
+   border: 1px solid black;
+}
+.logos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border:1px solid #000000;
+    padding: 30px 0px;
+}
+
+/* footer */
+
+.footer-section div:last-child {
+    text-align: center;
+}
+
+.uparrow {
+    display: block;
+    margin: 0 auto;
+    height: 150px;
+}
+
+/* feedback */
+
+.feedback{
+    width: 100vw;  /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  margin-top: 0px;
+}
+
+.seoperformance{
+    display: flex;
+    justify-content: space-between;
+}
+.Downarrow{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    /* margin: 20px 90px; */
+}
+
+.mainDownArrow img {
+    /* margin: 68px 648px; */
+    width: 20px;
+    height: auto;
+}
+/* media query */
+
+@media screen and (min-width: 1200px) {
+    .subcriber h2{
+        font-size: 128px
+  }
+
+}
+@media screen and (max-width: 720px) {
+    header nav{
+        display: none;
+    }
+    .subcriber-wrapper{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .subcriber-child{
+        width: 100%;
+    }
+    .subcriber-child .line {
+        display: none;
+    }
+    .partner-wrapper{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 720px) {
+    .parent-child {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .parent-child div {
+        flex-direction: column;
+        align-items: center;
+    }
+}
