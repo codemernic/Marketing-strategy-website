@@ -161,20 +161,28 @@ h2{
    background-color: greenyellow;
    border: 1px solid black;
 }
-.logos{
+/* partners-logo */
+.partners-logo{
+    padding: 50px 0px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    /* border-right: 1px solid grey; */
+}
+.footer-section{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border:1px solid #000000;
-    padding: 30px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+.footer-section div{
+ width: 20%;
+ text-align: center;
+}
+.footer-section div img {
+    width: 60%;
 }
 
 /* footer */
-
-.footer-section div:last-child {
-    text-align: center;
-}
-
 .uparrow {
     display: block;
     margin: 0 auto;
@@ -183,28 +191,59 @@ h2{
 
 /* feedback */
 
-.feedback{
-    width: 100vw;  /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  margin-top: 0px;
-}
+/* .feedback{
+    /* width: 100vw;  /* Full viewport width */
+  /* height: 100vh; Full viewport height */
+  /* margin-top: 0px; */
+/* }* */
+
+/* SEOPerformace */
 
 .seoperformance{
-    display: flex;
-    justify-content: space-between;
+    padding: 100px 0px;
 }
-.Downarrow{
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    margin-bottom: 35px;
-    /* margin: 20px 90px; */
+.feedback{
+    padding: 80px 0px;
 }
-
-.mainDownArrow img {
-    /* margin: 68px 648px; */
-    width: 20px;
-    height: auto;
+.seoperformance{
+    display: flex;
+    
+}
+.seoperformance > div {
+    width: 50%;
+}
+.seoperformance > div:nth-child(2){
+    background-color: #f8f8f8;
+}
+.seoperformance > div:nth-child(2) img {
+    width: 16px;  /* Adjust width as needed */
+    height: 16px; /* Adjust height as needed */
+}
+.mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px; /* Adds internal spacing */
+    margin-bottom: 10px; /* Adds space between each div */
+    background-color: #f8f8f8; /* Light background for subtle separation */
+    border-radius: 5px; /* Smooth edges (optional) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+    
+}
+p{
+    margin: 0;
+    flex: 1;
+}
+.performandresearch{
+    display: flex;
+}
+.seoperformance p {
+    margin: 15px 0px ;
+}
+.seoperformance .subcriber-icon{
+    margin-top: 0px;
+    color: #333333;
 }
 /* media query */
 
@@ -234,9 +273,16 @@ h2{
         text-align: center;
         gap: 20px;
     }
+    .seoperformance{
+        flex-direction: column;
+    }
+    .seoperformance > div {
+        width: 100%;
+        margin: 30px;
+    }
 }
 
-@media (max-width: 720px) {
+@media screen and (max-width: 720px) {
     .parent-child {
         flex-direction: column;
         align-items: flex-start; /* Align items to the left */
@@ -245,5 +291,29 @@ h2{
     .parent-child div {
         flex-direction: column;
         align-items: center;
+    }
+
+    .footer-section div:nth-child(1),
+    .footer-section div:nth-child(2),
+    .footer-section div:nth-child(3){
+        width: 30%
+    }
+    .footer-section div:nth-child(4),
+    .footer-section div:nth-child(5){
+            width: 50%;
+    }
+    .footer-section div:nth-child(4) img,
+    .footer-section div:nth-child(5) img {
+            width: 50%;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .footer-section div{
+        width: 100% !important;
+    }
+    .footer-section div img {
+        width: 45% !important;
     }
 }
